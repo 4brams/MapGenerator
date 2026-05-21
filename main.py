@@ -9,7 +9,7 @@ from skimage.morphology import skeletonize
 #config
 datasetImgWidth = 300
 datasetImgHeight = 300
-debug = True
+debug = False
 
 #function
 def separateImg(fileName, i):
@@ -246,7 +246,7 @@ def main():
     list = os.listdir("./mgTemp")
     for dirName in list:
         separateObj(dirName, np.array([3, 1, 14]), "water")
-        separateObj(dirName, np.array([234, 41, 131]), "tree")
+        separateObj(dirName, np.array([205, 22, 167]), "tree")
         separateObj(dirName, np.array([215, 171, 57]), "building")
         separateObj(dirName, np.array([27, 219, 129]), "road")
 
